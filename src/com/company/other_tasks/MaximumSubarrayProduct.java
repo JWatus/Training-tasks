@@ -13,8 +13,6 @@ package com.company.other_tasks;
         Output:   80  // The subarray is {-2, -40}
 */
 
-import java.util.Collection;
-
 public class MaximumSubarrayProduct {
 
     // Utility functions to get minimum of two integers
@@ -59,7 +57,7 @@ public class MaximumSubarrayProduct {
             /* If this element is 0, then the maximum product cannot
                end here, make both max_ending_here and min_ending
               _here 0
-               Assumption: Output is alway greater than or equal to 1. */
+               Assumption: Output is always greater than or equal to 1. */
             else if (arr[i] == 0) {
                 max_ending_here = 1;
                 min_ending_here = 1;
@@ -88,9 +86,28 @@ public class MaximumSubarrayProduct {
         return max_so_far;
     }
 
+    static int maxSubarrayProductAbs(int arr[]) {
+        int max_ending_here = 1;
+        int max_so_far = 1;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                max_ending_here = max_ending_here * Math.abs(arr[i]);
+            } else
+                max_ending_here = 1;
+
+            if (max_ending_here > max_so_far)
+                max_so_far = max_ending_here;
+        }
+        return max_so_far;
+    }
+
     public static void main(String[] args) {
 
-        int arr[] = {1, -2, -3, 0, 7, -8, -2};
+        int arrAbs[] = {1, -2, -3, 0, 3, 7, -2};
+        System.out.println("Maximum Sub array product with Abs is " +
+                maxSubarrayProductAbs(arrAbs));
+
+        int arr[] = {1, -2, -3, 0, 3, 0, -2};
         System.out.println("Maximum Sub array product is " +
                 maxSubarrayProduct(arr));
     }

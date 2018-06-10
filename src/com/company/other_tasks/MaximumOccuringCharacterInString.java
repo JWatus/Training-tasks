@@ -27,16 +27,15 @@ public class MaximumOccuringCharacterInString {
 
         // Construct character count array from the input
         // string.
-        int len = str.length();
-        for (int i = 0; i < len; i++)
-            count[str.charAt(i)]++;
+        for (int i = 0; i < str.length(); i++)
+            count[str.charAt(i)] = count[str.charAt(i)] + 1;
 
         int max = -1;  // Initialize max count
         char result = ' ';   // Initialize result
 
         // Traversing through the string and maintaining
         // the count of each character
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i < str.length(); i++) {
             if (max < count[str.charAt(i)]) {
                 max = count[str.charAt(i)];
                 result = str.charAt(i);
