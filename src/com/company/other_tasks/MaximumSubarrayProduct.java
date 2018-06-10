@@ -13,6 +13,8 @@ package com.company.other_tasks;
         Output:   80  // The subarray is {-2, -40}
 */
 
+import java.util.Collection;
+
 public class MaximumSubarrayProduct {
 
     // Utility functions to get minimum of two integers

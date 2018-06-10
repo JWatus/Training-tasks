@@ -10,8 +10,8 @@ import java.util.Set;
         ▪ nie korzystaj z Java Collection*/
 
 public class DuplicationRemover {
-// z zajeć, rozwiazanie Tomka
-    public static void removeDuplicates(int[] sortedArray) {
+    // Z zajeć, rozwiazanie Tomka
+    private static void removeDuplicates(int[] sortedArray) {
 
         int current = sortedArray[0];
         StringBuilder result = new StringBuilder();
@@ -41,7 +41,7 @@ public class DuplicationRemover {
     }
 
     // Setem
-    public static void removeDuplicatesMine(int[] sortedArray) {
+    private static void removeDuplicatesMine(int[] sortedArray) {
 
         Set<Integer> set = new HashSet<>();
 

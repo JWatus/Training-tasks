@@ -42,7 +42,6 @@ public class MaximumOccuringCharacterInString {
                 result = str.charAt(i);
             }
         }
-
         return result;
     }
 
