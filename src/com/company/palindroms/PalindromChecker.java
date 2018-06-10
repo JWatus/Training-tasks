@@ -47,13 +47,25 @@ public class PalindromChecker {
         return true;
     }
 
+    private static boolean reversePalindromCheck (String givenString) {
+        boolean isPal = false;
+        StringBuilder stringBuilder = new StringBuilder(givenString);
+        stringBuilder.reverse();
+        if(stringBuilder.toString().equals(givenString)){
+            isPal = true;
+        }
+        return isPal;
+    }
+
     public static void main(String[] args) {
 
         PalindromChecker pal = new PalindromChecker();
-
         pal.isPalindrom("Anannana");
         pal.isPalindrom("Book");
         pal.isPalindrom("Alarak");
         pal.isPalindrom("Alarala");
+
+        System.out.println(PalindromChecker.reversePalindromCheck("loko"));
+        System.out.println(PalindromChecker.reversePalindromCheck("lokol"));
     }
 }
