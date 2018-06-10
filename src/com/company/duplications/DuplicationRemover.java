@@ -10,7 +10,7 @@ import java.util.Set;
         ▪ nie korzystaj z Java Collection*/
 
 public class DuplicationRemover {
-
+// z zajeć, rozwiazanie Tomka
     public static void removeDuplicates(int[] sortedArray) {
 
         int current = sortedArray[0];
@@ -24,10 +24,23 @@ public class DuplicationRemover {
             }
         }
         System.out.print(result.toString());
-
     }
 
-// Setem
+    // moje rozwiazanie
+    private static void remover(int[] tab) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < tab.length; i++) {
+            if (stringBuilder.toString().contains(String.valueOf(tab[i]))) {
+                continue;
+            } else {
+                stringBuilder.append(tab[i]);
+                stringBuilder.append(", ");
+            }
+        }
+        System.out.println(stringBuilder.toString());
+    }
+
+    // Setem
     public static void removeDuplicatesMine(int[] sortedArray) {
 
         Set<Integer> set = new HashSet<>();
@@ -45,6 +58,11 @@ public class DuplicationRemover {
 
         System.out.println("Builder: ");
         DuplicationRemover.removeDuplicates(new int[]{1, 2, 3, 3, 4, 5, 5, 12, 12, 13});
+        System.out.println();
+
+        System.out.println("BuilderMine: ");
+        DuplicationRemover.remover(new int[]{1, 2, 3, 3, 4, 5, 5, 12, 12, 13});
+
         System.out.println();
         System.out.println("Set: ");
         DuplicationRemover.removeDuplicatesMine(new int[]{1, 2, 3, 3, 4, 5, 5, 12, 12, 13});

@@ -1,4 +1,4 @@
-package com.company.implementations;
+package com.company.implementations.linkedlist_implementation;
 
 import java.util.HashSet;
 

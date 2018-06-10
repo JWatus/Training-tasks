@@ -1,4 +1,4 @@
-package com.company.codewars;
+package com.company.searchers;
 
 
 import java.util.Arrays;
@@ -10,9 +10,7 @@ public class Pentanacci {
     public static long countOddPentaFib(long n) {
 
         long[] givenTab = {0, 1, 1, 2, 4};
-
         Set set = new TreeSet(); // throw away one "1"
-
         long[] result = Arrays.copyOf(givenTab, (int) (n + 1));
 
         for (int i = 5; i <= n; i++) {
@@ -20,20 +18,16 @@ public class Pentanacci {
                     .mapToLong(x -> result[x])
                     .sum();
         }
-
         for (long x : result) {
             if (x % 2 != 0) {
                 set.add(x);
             }
         }
-
         return set.size();
     }
 
     public static void main(String[] args) {
-
         System.out.println(Pentanacci.countOddPentaFib(15));
-
     }
 }
 /*

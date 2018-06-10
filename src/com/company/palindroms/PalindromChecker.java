@@ -2,7 +2,7 @@ package com.company.palindroms;
 
 public class PalindromChecker {
 
-    public boolean isPalindrom(String string) {
+    private boolean isPalindrom(String string) {
 
         boolean isPal = true;
         String s = string.toUpperCase();
@@ -22,7 +22,6 @@ public class PalindromChecker {
     }
 
     // Lub
-
     public boolean isItPalindrom(String s) {
         if (s == null) {
             return false;
@@ -47,13 +46,26 @@ public class PalindromChecker {
         return true;
     }
 
+    // Lub
+    private static boolean reversePalindromCheck (String givenString) {
+        boolean isPal = false;
+        StringBuilder stringBuilder = new StringBuilder(givenString);
+        stringBuilder.reverse();
+        if(stringBuilder.toString().equals(givenString)){
+            isPal = true;
+        }
+        return isPal;
+    }
+
     public static void main(String[] args) {
 
         PalindromChecker pal = new PalindromChecker();
-
         pal.isPalindrom("Anannana");
         pal.isPalindrom("Book");
         pal.isPalindrom("Alarak");
         pal.isPalindrom("Alarala");
+
+        System.out.println(PalindromChecker.reversePalindromCheck("loko"));
+        System.out.println(PalindromChecker.reversePalindromCheck("lokol"));
     }
 }

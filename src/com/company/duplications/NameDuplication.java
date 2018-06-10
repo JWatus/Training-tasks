@@ -7,7 +7,7 @@ package com.company.duplications;
 
 public class NameDuplication {
 
-    public static void showMeNameDuplications(String[] tab) {
+    private static void showMeNameDuplications(String[] tab) {
 
         String longestName = tab[0];
 

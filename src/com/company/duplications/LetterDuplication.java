@@ -10,7 +10,7 @@ package com.company.duplications;
 
 public class LetterDuplication {
 
-    public static boolean isThereDuplicatedLeters(String name) {
+    private static boolean isThereDuplicatedLetters(String name) {
 
         boolean isDupl = false;
         char[] tab = name.toCharArray();
@@ -24,16 +24,35 @@ public class LetterDuplication {
                 }
             }
         }
-
-        System.out.println(name+": "+isDupl);
+        System.out.println("Name length " + name.length());
+        System.out.println(name + ": " + isDupl);
         return isDupl;
+    }
+
+    private static boolean checkWithBuilder(String name) {
+        boolean isThereDuplicate = false;
+        char[] tab = name.toCharArray();
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (int i = 0; i < tab.length; i++) {
+            if (stringBuilder.toString().contains(String.valueOf(tab[i]))) {
+                isThereDuplicate = true;
+                break;
+            } else ;
+            stringBuilder.append(tab[i]);
+        }
+        System.out.println("There is duplicated letter in given name: " + isThereDuplicate);
+        return isThereDuplicate;
     }
 
     public static void main(String[] args) {
 
-        LetterDuplication.isThereDuplicatedLeters("Anastazja");
-        LetterDuplication.isThereDuplicatedLeters("Monica");
-        LetterDuplication.isThereDuplicatedLeters("Rachel");
-        LetterDuplication.isThereDuplicatedLeters("Phoebe");
+        LetterDuplication.checkWithBuilder("Jason");
+        LetterDuplication.checkWithBuilder("Agata");
+
+        LetterDuplication.isThereDuplicatedLetters("Anastazja");
+        LetterDuplication.isThereDuplicatedLetters("Monica");
+        LetterDuplication.isThereDuplicatedLetters("Rachel");
+        LetterDuplication.isThereDuplicatedLetters("Phoebe");
     }
 }
