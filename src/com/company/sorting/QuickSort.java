@@ -1,17 +1,19 @@
 package com.company.sorting;
+
 /**
-        Quicksort or partition-exchange sort, is a fast sorting algorithm, which is using divide and conquer algorithm.
-                Quicksort first divides a large list into two smaller sub-lists: the low elements and the high elements.
-                Quicksort can then recursively sort the sub-lists.
-
- The basic idea of Quicksort algorithm can be described as these steps:
-
- If the array contains only one element or zero elements then the array is sorted. If the array contains more then
- one element then:
-    1. Select an element as a pivot element, generally from middle but not necessary.
-    2. Data elements are grouped into two parts: one with elements that are in lower order than the pivot element, one with
-            element that are in higher order than the pivot element.
-    3. Sort the both parts separately by repeating step 1 and 2.*/
+ * Quicksort or partition-exchange sort, is a fast sorting algorithm, which is using divide and conquer algorithm.
+ * Quicksort first divides a large list into two smaller sub-lists: the low elements and the high elements.
+ * Quicksort can then recursively sort the sub-lists.
+ * <p>
+ * The basic idea of Quicksort algorithm can be described as these steps:
+ * <p>
+ * If the array contains only one element or zero elements then the array is sorted. If the array contains more then
+ * one element then:
+ * 1. Select an element as a pivot element, generally from middle but not necessary.
+ * 2. Data elements are grouped into two parts: one with elements that are in lower order than the pivot element, one with
+ * element that are in higher order than the pivot element.
+ * 3. Sort the both parts separately by repeating step 1 and 2.
+ */
 
 public class QuickSort {
 
@@ -77,6 +79,55 @@ public class QuickSort {
             System.out.print(i);
             System.out.print(" ");
         }
+    }
+
+    // inne rozwiazanie
+    private static void quickSort(Integer[] arr, int low, int high) {
+        //check for empty or null array
+        if (arr == null || arr.length == 0) {
+            return;
+        }
+
+        if (low >= high) {
+            return;
+        }
+
+        //Get the pivot element from the middle of the list
+        int middle = low + (high - low) / 2;
+        int pivot = arr[middle];
+
+        // make left < pivot and right > pivot
+        int i = low, j = high;
+        while (i <= j) {
+            //Check until all values on left side array are lower than pivot
+            while (arr[i] < pivot) {
+                i++;
+            }
+            //Check until all values on left side array are greater than pivot
+            while (arr[j] > pivot) {
+                j--;
+            }
+            //Now compare values from both side of lists to see if they need swapping
+            //After swapping move the iterator on both lists
+            if (i <= j) {
+                swap(arr, i, j);
+                i++;
+                j--;
+            }
+        }
+        //Do same operation as above recursively to sort two sub arrays
+        if (low < j) {
+            quickSort(arr, low, j);
+        }
+        if (high > i) {
+            quickSort(arr, i, high);
+        }
+    }
+
+    private static void swap(Integer array[], int x, int y) {
+        int temp = array[x];
+        array[x] = array[y];
+        array[y] = temp;
     }
 }
 
