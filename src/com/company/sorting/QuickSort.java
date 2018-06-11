@@ -4,14 +4,14 @@ package com.company.sorting;
                 Quicksort first divides a large list into two smaller sub-lists: the low elements and the high elements.
                 Quicksort can then recursively sort the sub-lists.
 
-        Steps to implement Quick sort:
+ The basic idea of Quicksort algorithm can be described as these steps:
 
-        1) Choose an element, called pivot, from the list. Generally pivot can be the middle index element.
-        2) Reorder the list so that all elements with values less than the pivot come before the pivot, while all
-                elements with values greater than the pivot come after it (equal values can go either way).
-                After this partitioning, the pivot is in its final position. This is called the partition operation.
-        3) Recursively apply the above steps to the sub-list of elements with smaller values and separately the
-            sub-list of elements with greater values.*/
+ If the array contains only one element or zero elements then the array is sorted. If the array contains more then
+ one element then:
+    1. Select an element as a pivot element, generally from middle but not necessary.
+    2. Data elements are grouped into two parts: one with elements that are in lower order than the pivot element, one with
+            element that are in higher order than the pivot element.
+    3. Sort the both parts separately by repeating step 1 and 2.*/
 
 public class QuickSort {
 
