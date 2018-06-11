@@ -1,8 +1,8 @@
 package com.company.sorting;
 
-// Time Complexity: O(n2) as there are two nested loops.
+/** Time Complexity: O(n2) as there are two nested loops.
 
-/*
+
 The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order)
 from unsorted part and putting it at the beginning. The algorithm maintains two subarrays in a given array.
 
@@ -36,7 +36,7 @@ The good thing about selection sort is it never makes more than O(n) swaps and c
 */
 
 public class SelectionSort {
-    void sort(int arr[]) {
+    private void sort(int arr[]) {
         int n = arr.length;
 
         // One by one move boundary of unsorted subarray
@@ -56,7 +56,7 @@ public class SelectionSort {
     }
 
     // Prints the array
-    void printArray(int arr[]) {
+    private void printArray(int arr[]) {
         int n = arr.length;
         for (int i = 0; i < n; ++i)
             System.out.print(arr[i] + " ");

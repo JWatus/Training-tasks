@@ -1,8 +1,8 @@
 package com.company.other_tasks;
 
-// Time Complexity: O(n)
+/** Time Complexity: O(n)
 
-/*Algorithm:
+    Algorithm:
         One obvious approach to solve this problem would be to sort the input string and then traverse through
         the sorted string to find the character which is occurring maximum number of times. Let us see if we
         can improve on this. So we will use a technique called ‘Hashing’. In this, when we traverse through the string,
@@ -18,9 +18,9 @@ package com.company.other_tasks;
 
 public class MaximumOccuringCharacterInString {
 
-    static final int ASCII_SIZE = 256;
+    private static final int ASCII_SIZE = 256;
 
-    static char getMaxOccuringChar(String str) {
+    private static char getMaxOccuringChar(String str) {
         // Create array to keep the count of individual
         // characters and initialize the array as 0
         int count[] = new int[ASCII_SIZE];

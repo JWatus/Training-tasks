@@ -2,7 +2,7 @@ package com.company.other_tasks;
 
 public class Swaper {
 
-    public static void swapNumbers(int a, int b) {
+    private static void swapNumbers(int a, int b) {
         print(a, b);
         // 5, 9
         a = a + b;      // a = 5 + 9

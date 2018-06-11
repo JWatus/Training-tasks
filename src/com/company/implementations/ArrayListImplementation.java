@@ -19,7 +19,7 @@ public class ArrayListImplementation<T> {
         elements[size++] = t;
     }
 
-    public void extendCapacity() {
+    private void extendCapacity() {
         int newSize = size * 2;
         elements = Arrays.copyOf(elements, newSize);
     }

@@ -1,16 +1,16 @@
 package com.company.searchers;
 
-// ZLOZONOSC OBLICZENIOWA
-// The time complexity of  algorithm is O(n)
+/** ZLOZONOSC OBLICZENIOWA
+ The time complexity of  algorithm is O(n)
 
-// Java code for linearly search x in arr[].  If x
-// is present  then return its  location,  otherwise
-// return -1
+ Java code for linearly search x in arr[].  If x
+ is present  then return its  location,  otherwise
+ return -1*/
 
 class LinearSearch
 {
     // This function returns index of element x in arr[]
-    static int search(int arr[], int n, int x)
+    private static int search(int arr[], int n, int x)
     {
         for (int i = 0; i < n; i++)
         {

@@ -1,6 +1,6 @@
 package com.company.duplications;
 
-/*      Napisz program, który dla podanej tablicy Stringów wypisze:
+/**     Napisz program, który dla podanej tablicy Stringów wypisze:
         - najdłuższe imię
         - najkrótsze imię
         - powtarzające się imiona                               */

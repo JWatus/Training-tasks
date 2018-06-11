@@ -1,8 +1,8 @@
 package com.company.other_tasks;
 
-// Time Complexity : O(n)
+/**  Time Complexity : O(n)
 
-/* You are given an array of 0s and 1s in random order. Segregate 0s on left side and 1s on right side of the array.
+     You are given an array of 0s and 1s in random order. Segregate 0s on left side and 1s on right side of the array.
         Traverse array only once.
 
         Input array   =  [0, 1, 0, 1, 0, 0, 1, 1, 1, 0]
@@ -13,7 +13,7 @@ package com.company.other_tasks;
 
 public class SegregatesZerosAndOnes {
     // function to segregate 0s and 1s
-    static void segregate0and1(int arr[], int n) {
+    private static void segregate0and1(int arr[], int n) {
         int count = 0; // counts the no of zeros in arr
 
         for (int i = 0; i < n; i++) {
@@ -31,7 +31,7 @@ public class SegregatesZerosAndOnes {
     }
 
     // function to print segregated array
-    static void print(int arr[], int n) {
+    private static void print(int arr[], int n) {
         System.out.print("Array after segregation is ");
         for (int i = 0; i < n; i++)
             System.out.print(arr[i] + " ");

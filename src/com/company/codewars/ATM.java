@@ -39,7 +39,7 @@ public class ATM {
     }
 }
 
-/*
+/**
         There is enough money available on ATM in nominal value 10, 20, 50, 100, 200 and 500 dollars.
 
         You are given money in nominal value of n with 1<=n<=1500.

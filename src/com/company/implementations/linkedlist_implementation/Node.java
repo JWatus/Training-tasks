@@ -2,8 +2,8 @@ package com.company.implementations.linkedlist_implementation;
 
 public class Node {
 
-    Node next;
-    Object data;
+    private Node next;
+    private Object data;
 
     public Node(Object data) {
         this.data = data;

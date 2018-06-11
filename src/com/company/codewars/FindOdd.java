@@ -2,7 +2,7 @@ package com.company.codewars;
 
 public class FindOdd {
 
-    public static int findIt(int[] A) {
+    private static int findIt(int[] A) {
 
         int oddCount = 0;
         int odd = 0;
@@ -27,5 +27,6 @@ public class FindOdd {
     }
 }
 
-//          Given an array, find the int that appears an odd number of times.
-//          There will always be only one integer that appears an odd number of times.
+/**
+          Given an array, find the int that appears an odd number of times.
+          There will always be only one integer that appears an odd number of times.*/

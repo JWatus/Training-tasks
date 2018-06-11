@@ -24,8 +24,7 @@ public class EightiesKids2 {
 
 // This is where the magic happens
 
-
- /*
+ /**
         Late last night in the Tanner household, ALF was repairing his spaceship so he might get back to Melmac. Unfortunately
         for him, he forgot to put on the parking brake, and the spaceship took off during repair. Now it's hovering in space.
 
@@ -51,7 +50,6 @@ public class EightiesKids2 {
         "Spaceship lost forever."
 
         */
-
 
 /*    public static String findSpaceship(String map) {
         String[] y = map.split("\n");

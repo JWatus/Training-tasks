@@ -1,6 +1,6 @@
 package com.company.other_tasks;
 
-/*
+/**
         Napisz funkcję, która pobierze dwie liczby całkowite i zwróci ich iloczyn (wynik mnożenia)
         ▪ przepisz funkcję tak, aby NIE używać operatora mnożenia
         ▪ upewnij się, że funkcja działa poprawnie dla liczb ujemnych
@@ -8,7 +8,7 @@ package com.company.other_tasks;
 
 public class Multiplier {
 
-    public static int multiplyWithAddOnly(int firstNumber, int secondNumber) {
+    private static int multiplyWithAddOnly(int firstNumber, int secondNumber) {
 
         int total = 0;
         if (firstNumber < 0) {

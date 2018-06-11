@@ -7,7 +7,8 @@ import java.util.TreeSet;
 import java.util.stream.IntStream;
 
 public class Pentanacci {
-    public static long countOddPentaFib(long n) {
+
+    private static long countOddPentaFib(long n) {
 
         long[] givenTab = {0, 1, 1, 2, 4};
         Set set = new TreeSet(); // throw away one "1"
@@ -30,7 +31,7 @@ public class Pentanacci {
         System.out.println(Pentanacci.countOddPentaFib(15));
     }
 }
-/*
+/**
     We have the following sequence:
 
         f(0) = 0

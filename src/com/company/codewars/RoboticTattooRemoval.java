@@ -32,7 +32,7 @@ public class RoboticTattooRemoval {
     };
 }
 
-/*
+/**
 
     Sometimes people get tattoos, sometimes they wish they hadn't, sometimes the tattoos must go. Lets create a robot
     that can remove tattoos.

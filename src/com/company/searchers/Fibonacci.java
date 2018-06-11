@@ -2,7 +2,7 @@ package com.company.searchers;
 
 public class Fibonacci {
 
-    public static void printElementAtIndex(int index) {
+    private static void printElementAtIndex(int index) {
         int num1 = 1;   // index 0
         int num2 = 1;   // index 1
         int elementAtIndex = 0; // trzeba zainicjalizowac

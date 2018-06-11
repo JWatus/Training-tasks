@@ -1,6 +1,6 @@
 package com.company.duplications;
 
-/*      Stwórz metodę, która przyjmuje parametr String (imię) i
+/**     Stwórz metodę, która przyjmuje parametr String (imię) i
         zwraca wartość logiczną true/false
         ▪ metoda sprawdza, czy w danym parametrze (imieniu)
         powtarza się jakaś litera

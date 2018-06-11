@@ -1,6 +1,6 @@
 package com.company.other_tasks;
 
-/*
+/**
         Stwórz maszynę losującą numery dużego lotka
         ▪ pobierz na wejściu zakres losowanych liczb (od 1 do
         pobranej)
@@ -11,7 +11,7 @@ package com.company.other_tasks;
 
 public class Lotto {
 
-    public static void draw(int zakres, int ilosc) {
+    private static void draw(int zakres, int ilosc) {
 
         int[] liczba = new int[ilosc];
 

@@ -1,10 +1,10 @@
 package com.company.searchers;
 
-// ZLOZONOSC OBLICZENIOWA
-// The time complexity of  algorithm is O(log n)
+/** ZLOZONOSC OBLICZENIOWA
+    The time complexity of  algorithm is O(log n)
 
-/*
-Exponential search involves two steps:
+
+    Exponential search involves two steps:
         Find range where element is present
         Do Binary Search in above found range.
 
@@ -21,7 +21,7 @@ public class ExponentialSearch {
 
     // Returns position of first ocurrence of
     // x in array
-    static int exponentialSearch(int arr[],
+    private static int exponentialSearch(int arr[],
                                  int n, int x)
     {
         // If x is present at first location itself

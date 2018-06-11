@@ -5,7 +5,7 @@ package com.company.other_tasks;
 public class DotCounter {
 
     // #1
-    public static void countDots(String stringWithDots) {
+    private static void countDots(String stringWithDots) {
 
         char[] tab = stringWithDots.toCharArray();
         int counter = 0;
@@ -19,7 +19,7 @@ public class DotCounter {
     }
 
     // #2
-    public static void compareLength(String stringWithDots) {
+    private static void compareLength(String stringWithDots) {
 
         String newString = stringWithDots.replace(".", "");
         int amountOfDots = stringWithDots.length() - newString.length();

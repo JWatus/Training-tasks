@@ -1,10 +1,10 @@
 package com.company.searchers;
 
-// ZLOZONOSC OBLICZENIOWA
-// O(1) in case of iterative implementation.
-// In case of recursive implementation, O(Logn) recursion call stack space.
+/** ZLOZONOSC OBLICZENIOWA
+    O(1) in case of iterative implementation.
+    In case of recursive implementation, O(Logn) recursion call stack space.
 
-/*We basically ignore half of the elements just after one comparison.
+    We basically ignore half of the elements just after one comparison.
 
         Compare x with the middle element.
         If x matches with middle element, we return the mid index.

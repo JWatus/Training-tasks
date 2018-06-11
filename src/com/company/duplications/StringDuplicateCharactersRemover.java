@@ -6,7 +6,7 @@ public class StringDuplicateCharactersRemover {
 
     /* Function removes duplicate characters from the string
     This function work in-place */
-    void removeDuplicates(String str) {
+    private void removeDuplicates(String str) {
         LinkedHashSet<Character> lhs = new LinkedHashSet<>();
         for (int i = 0; i < str.length(); i++)
             lhs.add(str.charAt(i));

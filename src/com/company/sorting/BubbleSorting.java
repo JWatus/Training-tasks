@@ -1,13 +1,13 @@
 package com.company.sorting;
 
 
-/*      Worst and Average Case Time Complexity: O(n*n). Worst case occurs when array is reverse sorted.
+/**      Worst and Average Case Time Complexity: O(n*n). Worst case occurs when array is reverse sorted.
         Best Case Time Complexity: O(n). Best case occurs when array is already sorted.
         Auxiliary Space: O(1)
         Boundary Cases: Bubble sort takes minimum time (Order of n) when elements are already sorted.
         */
 
-/*      Example:
+/**      Example:
         First Pass:
         ( 5 1 4 2 8 ) –> ( 1 5 4 2 8 ), Here, algorithm compares the first two elements, and swaps since 5 > 1.
         ( 1 5 4 2 8 ) –> ( 1 4 5 2 8 ), Swap since 5 > 4
@@ -24,7 +24,7 @@ package com.company.sorting;
 
 public class BubbleSorting {
 
-    public static int[] sort(int[] tab) {
+    private static int[] sort(int[] tab) {
 
         int change = 1;
         int temp;
@@ -50,6 +50,8 @@ public class BubbleSorting {
         }
     }
 }
-//         a = a + b;
-//         b = a - b;
-//         a = a - b;
+/**
+         a = a + b;
+         b = a - b;
+         a = a - b;
+*/

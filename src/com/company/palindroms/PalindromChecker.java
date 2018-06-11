@@ -22,7 +22,7 @@ public class PalindromChecker {
     }
 
     // Lub
-    public boolean isItPalindrom(String s) {
+    private boolean isItPalindrom(String s) {
         if (s == null) {
             return false;
         }

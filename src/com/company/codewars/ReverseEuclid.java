@@ -2,7 +2,7 @@ package com.company.codewars;
 
 import java.math.BigInteger;
 
-/*
+/**
  znajdz dwie liczby >= 0 dla ktorych najwiekszy wspolny dzielnik to divisior a liczba iteracji to iterations
 */
 
@@ -28,9 +28,9 @@ public class ReverseEuclid {
     }
 }
 
-//Task
-//        Your main goal is to find two numbers(>= 0), greatest common divisor of which will be
-//        divisor and number of iterations, taken by Euclids algorithm will be iterations.
+/**     Task
+        Your main goal is to find two numbers(>= 0), greatest common divisor of which will be
+        divisor and number of iterations, taken by Euclids algorithm will be iterations.*/
 
 /*
 import java.math.BigInteger;

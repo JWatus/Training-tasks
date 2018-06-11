@@ -1,8 +1,8 @@
 package com.company.implementations.linkedlist_implementation;
 
-// Time Complexity: O(n)
+/** Time Complexity: O(n)
 
-/*Reverse a linked list
+    Reverse a linked list
         Given pointer to the head node of a linked list, the task is to reverse the linked list.
         We need to reverse the list by changing links between nodes.*/
 
@@ -20,7 +20,7 @@ public class ReverseLinkedList {
     }
 
     /* Function to reverse the linked list */
-    Node reverse(Node node) {
+    private Node reverse(Node node) {
         Node prev = null;
         Node current = node;
         Node next = null;
@@ -35,7 +35,7 @@ public class ReverseLinkedList {
     }
 
     // prints content of double linked list
-    void printList(Node node) {
+    private void printList(Node node) {
         while (node != null) {
             System.out.print(node.data + " ");
             node = node.next;

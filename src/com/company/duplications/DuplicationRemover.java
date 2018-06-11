@@ -3,7 +3,7 @@ package com.company.duplications;
 import java.util.HashSet;
 import java.util.Set;
 
-/*      Dana jest tablica liczb
+/**     Dana jest tablica liczb
         np. {1, 2, 3, 3, 4, 5, 5, 12, 12, 13}
         ▪ napisz program, która usunie powtarzające się elementy i
         wypisze zawartość

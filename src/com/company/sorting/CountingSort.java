@@ -1,8 +1,8 @@
 package com.company.sorting;
 
-// Time Complexity: O(n+k) where n is the number of elements in input array and k is the range of input.
+/** Time Complexity: O(n+k) where n is the number of elements in input array and k is the range of input.
 
-/*For simplicity, consider the data in the range 0 to 9.
+        For simplicity, consider the data in the range 0 to 9.
         Input data: 1, 4, 1, 2, 7, 5, 2
         1) Take a count array to store the count of each unique object.
         Index:     0  1  2  3  4  5  6  7  8  9
@@ -24,7 +24,7 @@ package com.company.sorting;
 
 public class CountingSort {
 
-    void sort(char arr[]) {
+    private void sort(char arr[]) {
         int n = arr.length;
 
         // The output character array that will have sorted arr

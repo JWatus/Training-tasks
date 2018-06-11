@@ -2,7 +2,7 @@ package com.company.implementations.linkedlist_implementation;
 
 import java.util.HashSet;
 
-/*
+/**
 Detect loop in a linked list
 Given a linked list, check if the the linked list has loop or not.
 
@@ -26,7 +26,7 @@ public class LoopDetectionInLinkedList {
     }
 
     /* Inserts a new Node at front of the list. */
-    static public void push(int new_data) {
+    private static void push(int new_data) {
         /* 1 & 2: Allocate the Node &
                   Put in the data*/
         Node new_node = new Node(new_data);
@@ -40,7 +40,7 @@ public class LoopDetectionInLinkedList {
 
     // Returns true if there is a loop in linked
     // list else returns false.
-    static boolean detectLoop(Node h) {
+    private static boolean detectLoop(Node h) {
         HashSet<Node> s = new HashSet<Node>();
         while (h != null) {
             // If we have already has this node

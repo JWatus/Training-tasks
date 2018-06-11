@@ -6,9 +6,9 @@ import java.util.regex.Pattern;
 
 public class Robot {
 
-    List<String> stored = new ArrayList<>();
+    private List<String> stored = new ArrayList<>();
 
-    public String learnWord(String word) {
+    private String learnWord(String word) {
 
         stored.add("THANK");
         stored.add("YOU");
@@ -70,7 +70,7 @@ public class Robot {
 
 }
 
-/*
+/**
 
     Vicky is quite the small wonder. Most people don't even realize she's not a real girl, but a robot living amongst us.
     Sure, if you stick around her home for a while you might see her creator open up her back and make a few tweaks and

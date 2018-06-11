@@ -1,8 +1,7 @@
 package com.company.other_tasks;
 
-// Time Complexity: O(n)
+/** Time Complexity: O(n)
 
-/*
         Input: arr[] = {6, -3, -10, 0, 2}
         Output:   180  // The subarray is {6, -3, -10}
 
@@ -86,7 +85,8 @@ public class MaximumSubarrayProduct {
         return max_so_far;
     }
 
-    static int maxSubarrayProductAbs(int arr[]) {
+    // moje rozwiazanie
+    private static int maxSubarrayProductAbs(int arr[]) {
         int max_ending_here = 1;
         int max_so_far = 1;
         for (int i = 0; i < arr.length; i++) {

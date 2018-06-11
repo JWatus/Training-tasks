@@ -1,8 +1,8 @@
 package com.company.sorting;
 
-//Time Complexity: O(n*n)
+/**     Time Complexity: O(n*n)
 
-/*Example:
+        Example:
         12, 11, 13, 5, 6
 
         Let us loop for i = 1 (second element of the array) to 5 (Size of input array)
@@ -21,7 +21,7 @@ package com.company.sorting;
 
 public class InsertionSort {
     /*Function to sort array using insertion sort*/
-    void sort(int arr[]) {
+    private void sort(int arr[]) {
         int n = arr.length;
         for (int i = 1; i < n; ++i) {
             int key = arr[i];
@@ -39,7 +39,7 @@ public class InsertionSort {
     }
 
     /* A utility function to print array of size n*/
-    static void printArray(int arr[]) {
+    private static void printArray(int arr[]) {
         int n = arr.length;
         for (int i = 0; i < n; ++i)
             System.out.print(arr[i] + " ");
