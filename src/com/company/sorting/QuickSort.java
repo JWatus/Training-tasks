@@ -97,7 +97,9 @@ public class QuickSort {
         int pivot = arr[middle];
 
         // make left < pivot and right > pivot
-        int i = low, j = high;
+        int i = low;
+        int j = high;
+
         while (i <= j) {
             //Check until all values on left side array are lower than pivot
             while (arr[i] < pivot) {
@@ -115,6 +117,7 @@ public class QuickSort {
                 j--;
             }
         }
+
         //Do same operation as above recursively to sort two sub arrays
         if (low < j) {
             quickSort(arr, low, j);

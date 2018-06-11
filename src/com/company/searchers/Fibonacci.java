@@ -30,3 +30,5 @@ public class Fibonacci {
         Fibonacci.printElementAtIndex(7);
     }
 }
+
+// tablica dwuwymiarowa (kwadratowa) w drugiej tablicy o takich samych wymiarach wpisac wartosci bedace suma pol dookola miejca w tablicy
