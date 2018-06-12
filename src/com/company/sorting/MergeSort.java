@@ -3,6 +3,9 @@ package com.company.sorting;
 import java.util.Arrays;
 
 /**
+ * Merge sort does (log n) merge steps because each merge step doubles the list size.
+ * It does n work for each merge step because it must look at every item so it runs in O(n logn)
+ *
  * During the Mergesort process the object in the collection are divided into two collections. To split a collection,
  * Mergesort will take the middle of the collection and split the collection into its left and its right part.
  * The resulting collections are again recursively splitted via the Mergesort algorithm until they are broke to
@@ -13,9 +16,9 @@ import java.util.Arrays;
  * smaller and inserts this object into the new collection. For this collection it now selects the next elements
  * and selects the smaller element from both collection by comparing one element from each collection at a time.
  * <p>
- * 1. Divide the unsorted list into two sublists of about half the size
- * 2. Sort each of the two sublists
- * 3. Merge the two sorted sublists back into one sorted list
+ *      1.   Divide the unsorted list into two sublists of about half the size
+ *      2.   Sort each of the two sublists
+ *      3.   Merge the two sorted sublists back into one sorted list
  */
 
 public class MergeSort {
@@ -29,8 +32,7 @@ public class MergeSort {
         //Check the output which is sorted array
         System.out.println(Arrays.toString(a));
     }
-
-    @SuppressWarnings("rawtypes")
+    
     private static Comparable[] mergeSort(Comparable[] list) {
         //If list is empty; no need to do anything
         if (list.length <= 1) {
@@ -52,7 +54,6 @@ public class MergeSort {
         return list;
     }
 
-    @SuppressWarnings({"rawtypes", "unchecked"})
     private static void merge(Comparable[] first, Comparable[] second, Comparable[] result) {
         //Index Position in first array - starting with first element
         int iFirst = 0;
