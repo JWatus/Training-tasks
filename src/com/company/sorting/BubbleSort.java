@@ -22,7 +22,7 @@ package com.company.sorting;
         Now, the array is already sorted, but our algorithm does not know if it is completed.
         The algorithm needs one whole pass without any swap to know it is sorted.*/
 
-public class BubbleSorting {
+public class BubbleSort {
 
     private static int[] sort(int[] tab) {
 
@@ -44,7 +44,7 @@ public class BubbleSorting {
     }
 
     public static void main(String[] args) {
-        int[] tabs = BubbleSorting.sort(new int[]{1, 4, 5, 6, 8, 2, 3, 5});
+        int[] tabs = BubbleSort.sort(new int[]{1, 4, 5, 6, 8, 2, 3, 5});
         for (int element : tabs) {
             System.out.println(element);
         }
