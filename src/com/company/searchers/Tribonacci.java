@@ -1,5 +1,7 @@
 package com.company.searchers;
 
+import java.util.stream.IntStream;
+
 public class Tribonacci {
 
     private static double[] tribonacci(double[] s, int n) {
@@ -23,6 +25,35 @@ public class Tribonacci {
     }
 
     public static void main(String[] args) {
-        Tribonacci.tribonacci(new double[]{1.0, 2.0, 3.5}, 4);
+        System.out.println("-----------------");
+        System.out.println("Tribonacci");
+        System.out.println("-----------------");
+        Tribonacci.tribonacci(new double[]{1.0, 2.0, 3.5}, 6);
+        System.out.println("-----------------");
+        System.out.println("Xbonacci");
+        System.out.println("-----------------");
+        Tribonacci.xbonacci(new double[]{1.0, 2.0, 3.5,0,0,0}, 16, 6);
+    }
+
+    private static double[] xbonacci(double[] s, int n, int x) {        // x - ile ostatnich liczb dodaje do siebie
+        double[] res = new double[n];                                   // n - ilosc liczb w ciagu
+        if (n < x) {
+            for (int i = 0; i < n; i++) {
+                res[i] = s[i];
+                System.out.println(res[i]);
+            }
+            return res;
+        }
+        for (int i = 0; i < x; i++) {
+            res[i] = s[i];
+            System.out.println(res[i]);
+        }
+        for (int i = x; i < n; i++) {
+            res[i] = IntStream.range(i - x, i)
+                    .mapToDouble(l -> res[l])
+                    .sum();
+            System.out.println(res[i]);
+        }
+        return res;
     }
 }
