@@ -50,7 +50,7 @@ public class Tribonacci {
         }
         for (int i = x; i < n; i++) {
             res[i] = IntStream.range(i - x, i)
-                    .mapToDouble(l -> res[l])
+                    .mapToDouble(j -> res[j])
                     .sum();
             System.out.println(res[i]);
         }
