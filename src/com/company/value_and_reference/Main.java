@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Integer a = 10;
         Integer b = 20;
-        switcherObjectImmutable(a, b);          // gdybym przypisal wartosc tą do b to by zwrocił 10 - w innym wypadku 20 bo String jest immutable
+        switcherObjectImmutable(a, b);          // gdybym przypisal wartosc tą do b to by zwrocił 10 - w innym wypadku 20 bo Integer jest immutable
         System.out.println(a);
         System.out.println(b);
         System.out.println("............");
