@@ -32,7 +32,7 @@ public class Tribonacci {
         System.out.println("-----------------");
         System.out.println("Xbonacci");
         System.out.println("-----------------");
-        Tribonacci.xbonacci(new double[]{1.0, 2.0, 3.5,0,0,0}, 16, 6);
+        Tribonacci.xbonacci(new double[]{1, 1, 1, 1, 1, 1}, 16, 6);
     }
 
     private static double[] xbonacci(double[] s, int n, int x) {        // x - ile ostatnich liczb dodaje do siebie
