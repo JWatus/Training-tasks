@@ -5,7 +5,7 @@ public class Fibonacci {
     private static void printElementAtIndex(int index) {
         int num1 = 1;   // index 0
         int num2 = 1;   // index 1
-        int elementAtIndex = 0; // trzeba zainicjalizowac
+        int elementAtIndex = 0;
 
         for (int i = 2; i < index; i++) {
             elementAtIndex = num1 + num2;

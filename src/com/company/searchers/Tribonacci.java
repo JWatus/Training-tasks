@@ -37,7 +37,7 @@ public class Tribonacci {
 
     private static double[] xbonacci(double[] s, int n, int x) {        // x - ile ostatnich liczb dodaje do siebie
         double[] res = new double[n];                                   // n - ilosc liczb w ciagu
-        if (n < x) {
+        if (n < x) {                                                    // s - piewsze wyrazy ciagu
             for (int i = 0; i < n; i++) {
                 res[i] = s[i];
                 System.out.println(res[i]);
