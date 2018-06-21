@@ -1,5 +1,7 @@
 package com.company.value_and_reference;
 
+import java.util.Objects;
+
 public class Car {
 
     private int age;
@@ -27,5 +29,20 @@ public class Car {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Car)) return false;
+        Car car = (Car) o;
+        return getAge() == car.getAge() &&
+                Objects.equals(getName(), car.getName());
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(getAge(), getName());
     }
 }
