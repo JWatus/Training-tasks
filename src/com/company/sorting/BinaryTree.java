@@ -1,9 +1,9 @@
 package com.company.sorting;
 
-public class BinaryTreeTest {
+public class BinaryTree {
 
     public static void main(String[] args) {
-        new BinaryTreeTest().run();
+        new BinaryTree().run();
     }
 
     static class Node {
