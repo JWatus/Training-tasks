@@ -36,8 +36,8 @@ public class BinaryTree {
         System.out.println("Traversing tree front-to-back from location 7");
         printFrontToBack(root, 7);
         System.out.println("Check if tree contains node");
-        System.out.println(contains(root,9));
-        System.out.println(contains(root,26));
+        System.out.println(contains(root, 9));
+        System.out.println(contains(root, 26));
     }
 
     private void insert(Node node, int value) {
@@ -67,9 +67,11 @@ public class BinaryTree {
         if (value == current.value) {
             return true;
         }
-        return value < current.value
-                ? contains(current.left, value)
-                : contains(current.right, value);
+        if (value < current.value) {
+            return contains(current.left, value);
+        } else {
+            return contains(current.right, value);
+        }
     }
 
     private void printInOrder(Node node) {
