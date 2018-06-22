@@ -1,5 +1,8 @@
 package com.company.sorting;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class BinaryTree {
 
     public static void main(String[] args) {
@@ -8,15 +11,15 @@ public class BinaryTree {
 
     static class Node {
         Node left;
-
         Node right;
-
         int value;
 
         Node(int value) {
             this.value = value;
         }
     }
+
+    List<String> lista = new LinkedList<>();
 
     private void run() {
         // build the simple tree from chapter 11.
@@ -32,6 +35,9 @@ public class BinaryTree {
         printInOrder(root);
         System.out.println("Traversing tree front-to-back from location 7");
         printFrontToBack(root, 7);
+        System.out.println("Check if tree contains node");
+        System.out.println(contains(root,9));
+        System.out.println(contains(root,26));
     }
 
     private void insert(Node node, int value) {
@@ -52,6 +58,18 @@ public class BinaryTree {
                 node.right = new Node(value);
             }
         }
+    }
+
+    private boolean contains(Node current, int value) {
+        if (current == null) {
+            return false;
+        }
+        if (value == current.value) {
+            return true;
+        }
+        return value < current.value
+                ? contains(current.left, value)
+                : contains(current.right, value);
     }
 
     private void printInOrder(Node node) {
