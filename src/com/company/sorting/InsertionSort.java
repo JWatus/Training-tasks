@@ -37,9 +37,8 @@ public class InsertionSort {
     }
 
     private static void insertionSort(int[] a) {
-        int d;
         for (int i = 1; i < a.length; i++) {
-            d = a[i];
+            int d = a[i];
             int j = i;
             while (j > 0 && (a[j - 1] > d)) {
                 a[j] = a[j - 1];
