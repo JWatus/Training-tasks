@@ -2,32 +2,33 @@ package com.company.searchers;
 
 public class Fibonacci {
 
-    private static void printElementAtIndex(int index) {
+    private static int printElementAtIndex(int index) {
         int num1 = 1;   // index 0
         int num2 = 1;   // index 1
         int elementAtIndex = 0;
 
-        for (int i = 2; i < index; i++) {
+        if (index == 0 || index == 1)
+            return 1;
+
+        for (int i = 1; i < index; i++) {
             elementAtIndex = num1 + num2;
             num1 = num2;
             num2 = elementAtIndex;
         }
 
-        if (index == 1 || index == 2)
-            System.out.println("Index: " + index + ", Element at index: " + 1);
-        else
-            System.out.println("Index: " + index + ", Element at index: " + elementAtIndex);
+        return elementAtIndex;
     }
 
     public static void main(String[] args) {
 
-        Fibonacci.printElementAtIndex(1);
-        Fibonacci.printElementAtIndex(2);
-        Fibonacci.printElementAtIndex(3);
-        Fibonacci.printElementAtIndex(4);
-        Fibonacci.printElementAtIndex(5);
-        Fibonacci.printElementAtIndex(6);
-        Fibonacci.printElementAtIndex(7);
+        System.out.println(Fibonacci.printElementAtIndex(0));
+        System.out.println(Fibonacci.printElementAtIndex(1));
+        System.out.println(Fibonacci.printElementAtIndex(2));
+        System.out.println(Fibonacci.printElementAtIndex(3));
+        System.out.println(Fibonacci.printElementAtIndex(4));
+        System.out.println(Fibonacci.printElementAtIndex(5));
+        System.out.println(Fibonacci.printElementAtIndex(6));
+        System.out.println(Fibonacci.printElementAtIndex(7));
     }
 }
 

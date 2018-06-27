@@ -48,10 +48,14 @@ public class SelectionSort {
             }
             // Swap the found minimum element with the first
             // element
-            int temp = arr[min_idx];
-            arr[min_idx] = arr[i];
-            arr[i] = temp;
+            swapElements(arr, i, min_idx);
         }
+    }
+
+    private void swapElements(int[] arr, int i, int min_idx) {
+        int temp = arr[min_idx];
+        arr[min_idx] = arr[i];
+        arr[i] = temp;
     }
 
     // Prints the array

@@ -23,10 +23,11 @@ public class FindOdd {
     }
 
     public static void main(String[] args) {
-        FindOdd.findIt(new int[]{5,4,3,2,1,5,4,3,2,10,10});
+        FindOdd.findIt(new int[]{5, 4, 3, 2, 1, 5, 4, 3, 2, 10, 10});
     }
 }
 
 /**
-          Given an array, find the int that appears an odd number of times.
-          There will always be only one integer that appears an odd number of times.*/
+ * Given an array, find the int that appears an odd number of times.
+ * There will always be only one integer that appears an odd number of times.
+ */

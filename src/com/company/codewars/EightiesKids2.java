@@ -5,7 +5,7 @@ public class EightiesKids2 {
     public static String findSpaceship(String map) {
 
         int x = 0;
-        int y = map.length() - map.replace("\n", "").length();
+        int y = map.length() - map.replace("\n", "").length(); // zlicza \n czyli ilosc przejsc do nastepnego wiersza = wysokosc
 
         for (Character c : map.toCharArray())
 
