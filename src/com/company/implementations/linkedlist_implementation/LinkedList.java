@@ -2,7 +2,7 @@ package com.company.implementations.linkedlist_implementation;
 
 // Linked List in Java. Written by Joe James.
 public class LinkedList {
-    private Node root;
+    private Node root;      // root - pierwszy Node w liscie
     private int size;
 
     public LinkedList() {
@@ -25,15 +25,7 @@ public class LinkedList {
         System.out.println(ll.find(5));
     }
 
-    public void setSize(int s) {
-        this.size = s;
-    }
-
-    public int getSize() {
-        return this.size;
-    }
-
-    public Node add(int data) {
+    public Node add(int data) {                 // dodajemy Node na początek listy, root się zmienia
         Node newNode = new Node(data, root);
         this.root = newNode;
         this.size++;
@@ -53,13 +45,13 @@ public class LinkedList {
 
     public boolean remove(int data) {
         Node thisNode = this.root;
-        Node prevNode = null;
+        Node prevNode = null;       // startuje jako null bo nie ma Node poprzedzającego root
 
         while (thisNode != null) {
             if (thisNode.getData() == data) {
                 if (prevNode != null)
-                    prevNode.setNextNode(thisNode.getNextNode());
-                else
+                    prevNode.setNextNode(thisNode.getNextNode());   // przekierowujemy wskaznik next node na kolejny Node
+                else                                                // (omija ten wyrzucany)
                     this.root = null;
                 this.setSize(this.getSize() - 1);
                 return true;
@@ -68,6 +60,14 @@ public class LinkedList {
             thisNode = thisNode.getNextNode();
         }
         return false;
+    }
+
+    public void setSize(int s) {
+        this.size = s;
+    }
+
+    public int getSize() {
+        return this.size;
     }
 
     // Node class

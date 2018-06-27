@@ -40,21 +40,21 @@ public class LoopDetectionInLinkedList {
 
     // Returns true if there is a loop in linked
     // list else returns false.
-    private static boolean detectLoop(Node h) {
-        HashSet<Node> s = new HashSet<Node>();
-        while (h != null) {
+    private static boolean detectLoop(Node node) {
+        HashSet<Node> set = new HashSet<Node>();
+        while (node != null) {
             // If we have already has this node
             // in hashmap it means their is a cycle
             // (Because you we encountering the
             // node second time).
-            if (s.contains(h))
+            if (set.contains(node))
                 return true;
 
             // If we are seeing the node for
             // the first time, insert it in hash
-            s.add(h);
+            set.add(node);
 
-            h = h.next;
+            node = node.next;
         }
 
         return false;
