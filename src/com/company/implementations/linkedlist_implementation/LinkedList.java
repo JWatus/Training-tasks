@@ -5,7 +5,7 @@ public class LinkedList {
     private Node root;      // root - pierwszy Node w liscie
     private int size;
 
-    public LinkedList() {
+    private LinkedList() {
         root = new Node();
         size = 0;
     }
