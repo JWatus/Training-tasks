@@ -59,10 +59,12 @@ public class Main {
         System.out.println("\nDobbie doubleValue: " + dobbie);
         Double ddoodd = Double.valueOf(integer);
         System.out.println("Ddoodd valueOf: " + ddoodd);
-        Double donnie = ddoodd;
+        Double donnie = dobbie;
         System.out.println("Donnie is like dobbie: " + donnie);
         dobbie = new Double(90809.986);
         System.out.println("Dobbie is now not like donnie: " + dobbie);
+        dobbie = 7000.7;
+        System.out.println("Dobbie is now not like dobbie moment ago: " + dobbie);
         System.out.println("Donnie still is like old dobbie: " + donnie);
     }
 }
