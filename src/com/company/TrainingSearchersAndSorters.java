@@ -1,0 +1,206 @@
+package com.company;
+
+import java.util.stream.IntStream;
+
+public class TrainingSearchersAndSorters {
+
+    public static void main(String[] args) {
+
+        // BINARY TREE
+//        Node node = new Node(7);
+//        insertIntoBinaryTree(node, 1);
+//        insertIntoBinaryTree(node, 11);
+//        insertIntoBinaryTree(node, 13);
+//        insertIntoBinaryTree(node, 5);
+//        insertIntoBinaryTree(node, 6);
+//        insertIntoBinaryTree(node, 4);
+//        System.out.println(containsInBinaryTree(node, 22));
+//        System.out.println(containsInBinaryTree(node, 13));
+//        printInOrder(node);
+
+        // BUBBLE SORT
+//        int[] bubbleSortArray = new int[]{1, 5, 6, 2, 9, 34, 67, 12};
+//        //  bubbleSorting(bubbleSortArray);
+//        for (int a : bubbleSortArray) {
+//            System.out.println("Bubbled value " + a);
+//        }
+
+        //INSERTION SORT
+//        int[] insertionSortArray = new int[]{77, 54, 2, 1, 6, 89, 23, -17, -5};
+//        //   insertionSorting(insertionSortArray);
+//        for (int a : insertionSortArray) {
+//            System.out.println("Inserted value " + a);
+//        }
+
+        //SELECTION SORT
+//        int[] selectionSortArray = new int[]{99, -7, 43, 2, 76, -98};
+//        //  selectionSorting(selectionSortArray);
+//        for (int a : selectionSortArray) {
+//            System.out.println("Selected value " + a);
+//        }
+
+        //QUICK SORT
+//        int[] quickSortArray = new int[]{9, 7, -10, 45, -37, 23};
+//        // quickSorting(quickSortArray, 0, quickSortArray.length - 1);
+//        for (int a : selectionSortArray) {
+//            System.out.println("Quick selected value " + a);
+//        }
+
+        //BINARY SEARCH
+        int[] binarySearchArray = new int[]{0, 1, 1, 2, 3, 4, 6, 7, 8, 90, 324};
+        int result = binarySearch(binarySearchArray, 3);
+        System.out.println("\nBinary search");
+        System.out.println("Index: " + result);
+
+        //XBONACCI
+
+        System.out.println("\nXbonacci");
+        for (int j : xbonacci(new int[]{1, 1, 1, 1, 1}, 5, 10))
+            System.out.println("  number: " + j);
+
+        //FIBONACCI
+        System.out.println("\nFibonacci");
+        System.out.println(fibonacci(1));
+        System.out.println(fibonacci(2));
+        System.out.println(fibonacci(3));
+        System.out.println(fibonacci(4));
+        System.out.println(fibonacci(5));
+        System.out.println(fibonacci(6));
+        System.out.println(fibonacci(7));
+
+        //FIBONACCI RECURSIVE
+        System.out.println("\nRecursive");
+        System.out.println(fibonacciRecursive(1));
+        System.out.println(fibonacciRecursive(2));
+        System.out.println(fibonacciRecursive(3));
+        System.out.println(fibonacciRecursive(4));
+        System.out.println(fibonacciRecursive(5));
+        System.out.println(fibonacciRecursive(6));
+        System.out.println(fibonacciRecursive(7));
+    }
+
+    /**
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     * FIBONACCI
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     */
+
+    private static int fibonacci(int x) {
+
+        int firstNumber = 0;
+        int secondNumber = 1;
+        int chosen = 0;
+
+        if (x == 1)
+            return 0;
+        if (x == 2)
+            return 1;
+
+        for (int i = 3; i <= x; i++) {
+            chosen = firstNumber + secondNumber;
+            firstNumber = secondNumber;
+            secondNumber = chosen;
+        }
+        return chosen;
+    }
+
+    private static int fibonacciRecursive(int x) {
+
+        int chosen = 0;
+
+        if (x == 1)
+            return 0;
+        if (x == 2)
+            return 1;
+
+        for (int i = 3; i <= x; i++) {
+            chosen = fibonacciRecursive(i - 2) + fibonacciRecursive(i - 1);
+        }
+        return chosen;
+    }
+
+    /**
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     * XBONACCI
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     */
+
+    private static int[] xbonacci(int[] firstNumbers, int n, int x) {       // x - chosen, długość ciagu | n - ile ostatnich
+
+        int[] newArray = new int[x];
+
+        if (x < n) {
+            for (int i = 0; i < x; i++) {
+                newArray[i] = firstNumbers[i];
+            }
+        } else {
+            for (int i = 0; i < n; i++) {
+                newArray[i] = firstNumbers[i];
+            }
+            for (int i = n; i < x; i++) {
+                newArray[i] = IntStream.range(i - n, i)
+                        .map(j -> newArray[j])
+                        .sum();
+            }
+        }
+        return newArray;
+    }
+
+    /**
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     * BINARY SEARCH
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     */
+
+    private static int binarySearch(int[] arr, int chosen) {
+
+        int begin = 0;
+        int end = arr.length - 1;
+
+        while (begin <= end) {
+            int middle = (begin + end) / 2;
+            if (arr[middle] == chosen)
+                return middle;
+            else if (arr[middle] > chosen)
+                end = middle - 1;
+            else if (arr[middle] < chosen)
+                begin = middle + 1;
+        }
+        return -1;
+    }
+
+    /**
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     * QUICK SORT O(n*log n)
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     */
+
+
+    /**
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     * SELECTION SORT O(n*n)
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     */
+
+    /**
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     * INSERTION SORT O(n*n)
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     */
+
+    /**
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     * BUBBLE SORT O(n*n)
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     */
+
+
+    /**
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     * BINARY TREE
+     * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     */
+
+    
+
+}

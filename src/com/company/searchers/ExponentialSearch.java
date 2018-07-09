@@ -19,7 +19,7 @@ import java.util.Arrays;
 
 public class ExponentialSearch {
 
-    // Returns position of first ocurrence of
+    // Returns position of first occurrence of
     // x in array
     private static int exponentialSearch(int arr[],
                                  int n, int x)
