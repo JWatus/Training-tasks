@@ -7,23 +7,26 @@ public class TrainingSearchersAndSorters {
     public static void main(String[] args) {
 
         // BINARY TREE
-//        Node node = new Node(7);
-//        insertIntoBinaryTree(node, 1);
-//        insertIntoBinaryTree(node, 11);
-//        insertIntoBinaryTree(node, 13);
-//        insertIntoBinaryTree(node, 5);
-//        insertIntoBinaryTree(node, 6);
-//        insertIntoBinaryTree(node, 4);
-//        System.out.println(containsInBinaryTree(node, 22));
-//        System.out.println(containsInBinaryTree(node, 13));
-//        printInOrder(node);
+        System.out.println("BinaryTree");
+        Node node = new Node(7);
+        System.out.println("Root node is " + node.value);
+        insertIntoBinaryTree(node, 1);
+        insertIntoBinaryTree(node, 11);
+        insertIntoBinaryTree(node, 13);
+        insertIntoBinaryTree(node, 5);
+        insertIntoBinaryTree(node, 6);
+        insertIntoBinaryTree(node, 4);
+        System.out.println(containsInBinaryTree(node, 22));
+        System.out.println(containsInBinaryTree(node, 13));
+        printInOrder(node);
 
         // BUBBLE SORT
-//        int[] bubbleSortArray = new int[]{1, 5, 6, 2, 9, 34, 67, 12};
-//        //  bubbleSorting(bubbleSortArray);
-//        for (int a : bubbleSortArray) {
-//            System.out.println("Bubbled value " + a);
-//        }
+        int[] bubbleSortArray = new int[]{1, 5, 6, 2, 9, 34, 67, 12};
+        bubbleSorting(bubbleSortArray);
+        System.out.println("\nBubbleSorting");
+        for (int a : bubbleSortArray) {
+            System.out.println("Bubbled value " + a);
+        }
 
         //INSERTION SORT
 //        int[] insertionSortArray = new int[]{77, 54, 2, 1, 6, 89, 23, -17, -5};
@@ -194,6 +197,23 @@ public class TrainingSearchersAndSorters {
      * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
      */
 
+    private static void bubbleSorting(int[] arr) {
+
+        boolean wasThereAnyChange = true;
+
+        while (wasThereAnyChange == true) {
+            wasThereAnyChange = false;
+            for (int i = 0; i < arr.length - 1; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    arr[i] = arr[i] + arr[i + 1];
+                    arr[i + 1] = arr[i] - arr[i + 1];
+                    arr[i] = arr[i] - arr[i + 1];
+                    wasThereAnyChange = true;
+                }
+            }
+        }
+    }
+
 
     /**
      * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -201,6 +221,50 @@ public class TrainingSearchersAndSorters {
      * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
      */
 
-    
+    static class Node {
+        Node left;
+        Node right;
+        int value;
 
+        Node(int value) {
+            this.value = value;
+        }
+    }
+
+    private static void insertIntoBinaryTree(Node node, int value) {
+        if (value < node.value) {
+            if (node.left != null)
+                insertIntoBinaryTree(node.left, value);
+            else {
+                node.left = new Node(value);
+                System.out.println("Inserted into binary tree: " + value + " to the left of " + node.value);
+            }
+        } else {
+            if (node.right != null)
+                insertIntoBinaryTree(node.right, value);
+            else {
+                node.right = new Node(value);
+                System.out.println("Inserted into binary tree: " + value + " to the right of " + node.value);
+            }
+        }
+    }
+
+    private static boolean containsInBinaryTree(Node node, int value) {
+        if (node == null)
+            return false;
+        if (value == node.value)
+            return true;
+        if (node.value > value)
+            return containsInBinaryTree(node.left, value);
+        else
+            return containsInBinaryTree(node.right, value);
+    }
+
+    private static void printInOrder(Node node) {
+        if (node != null) {
+            printInOrder(node.left);
+            System.out.println("Traversed: " + node.value);
+            printInOrder(node.right);
+        }
+    }
 }
