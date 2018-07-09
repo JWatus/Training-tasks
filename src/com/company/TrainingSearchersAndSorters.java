@@ -36,11 +36,12 @@ public class TrainingSearchersAndSorters {
 //        }
 
         //SELECTION SORT
-//        int[] selectionSortArray = new int[]{99, -7, 43, 2, 76, -98};
-//        //  selectionSorting(selectionSortArray);
-//        for (int a : selectionSortArray) {
-//            System.out.println("Selected value " + a);
-//        }
+        int[] selectionSortArray = new int[]{99, -7, 43, 2, 76, -98};
+        selectionSorting(selectionSortArray);
+        System.out.println("\nSelectionSorting");
+        for (int a : selectionSortArray) {
+            System.out.println("Selected value " + a);
+        }
 
         //QUICK SORT
 //        int[] quickSortArray = new int[]{9, 7, -10, 45, -37, 23};
@@ -184,6 +185,21 @@ public class TrainingSearchersAndSorters {
      * SELECTION SORT O(n*n)
      * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
      */
+
+    private static void selectionSorting(int[] arr) {
+
+        for (int i = 0; i < arr.length; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[minIndex] > arr[j]) {
+                    minIndex = j;
+                }
+            }
+            int temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
+        }
+    }
 
     /**
      * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
