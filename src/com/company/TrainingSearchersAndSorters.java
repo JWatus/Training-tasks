@@ -25,22 +25,23 @@ public class TrainingSearchersAndSorters {
         bubbleSorting(bubbleSortArray);
         System.out.println("\nBubbleSorting");
         for (int a : bubbleSortArray) {
-            System.out.println("Bubbled value " + a);
+            System.out.println("  value " + a);
         }
 
         //INSERTION SORT
-//        int[] insertionSortArray = new int[]{77, 54, 2, 1, 6, 89, 23, -17, -5};
-//        //   insertionSorting(insertionSortArray);
-//        for (int a : insertionSortArray) {
-//            System.out.println("Inserted value " + a);
-//        }
+        int[] insertionSortArray = new int[]{77, 54, 2, 1, 6, 89, 23, -17, -5};
+        insertionSorting(insertionSortArray);
+        System.out.println("\nInsertionSorting");
+        for (int a : insertionSortArray) {
+            System.out.println("  value " + a);
+        }
 
         //SELECTION SORT
         int[] selectionSortArray = new int[]{99, -7, 43, 2, 76, -98};
         selectionSorting(selectionSortArray);
         System.out.println("\nSelectionSorting");
         for (int a : selectionSortArray) {
-            System.out.println("Selected value " + a);
+            System.out.println("  value " + a);
         }
 
         //QUICK SORT
@@ -206,6 +207,19 @@ public class TrainingSearchersAndSorters {
      * INSERTION SORT O(n*n)
      * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
      */
+
+    private static void insertionSorting(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int thisOne = arr[i];
+            int j = i;
+
+            while (j > 0 && arr[j - 1] > thisOne) {
+                arr[j] = arr[j - 1];
+                j--;
+            }
+            arr[j] = thisOne;
+        }
+    }
 
     /**
      * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
