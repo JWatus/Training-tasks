@@ -39,5 +39,4 @@ public class SqrtNumbers {
 
         System.out.println("\nNumber of integers (moduloOneWay): " + counter);
     }
-
 }
