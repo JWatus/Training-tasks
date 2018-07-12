@@ -10,21 +10,6 @@ import java.util.Set;
         ▪ nie korzystaj z Java Collection*/
 
 public class DuplicationRemover {
-    // Z zajeć, rozwiazanie Tomka
-    private static void removeDuplicates(int[] sortedArray) {
-
-        int current = sortedArray[0];
-        StringBuilder result = new StringBuilder();
-
-        for (int i = 0; i < sortedArray.length; i++) {
-            if (current != sortedArray[i]) {
-                result.append(current);
-                result.append(", ");
-                current = sortedArray[i];
-            }
-        }
-        System.out.print(result.toString());
-    }
 
     // moje rozwiazanie
     private static void remover(int[] tab) {
@@ -55,10 +40,6 @@ public class DuplicationRemover {
     }
 
     public static void main(String[] args) {
-
-        System.out.println("Builder: ");
-        DuplicationRemover.removeDuplicates(new int[]{1, 2, 3, 3, 4, 5, 5, 12, 12, 13});
-        System.out.println();
 
         System.out.println("BuilderMine: ");
         DuplicationRemover.remover(new int[]{1, 2, 3, 3, 4, 5, 5, 12, 12, 13});
