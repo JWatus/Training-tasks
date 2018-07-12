@@ -1,4 +1,4 @@
-package com.company.sorting;
+package com.company.implementations.binartree_implementation;
 
 import java.util.LinkedList;
 import java.util.List;

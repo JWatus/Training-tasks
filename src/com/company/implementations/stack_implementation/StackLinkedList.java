@@ -35,7 +35,7 @@ public class StackLinkedList<T> implements Stack<T> {
 
     public T pop() {
         if (first == null)
-            new java.util.NoSuchElementException();
+            throw new java.util.NoSuchElementException();
         T ele = first.ele;
         first = first.next;
         size--;
