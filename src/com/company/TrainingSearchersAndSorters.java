@@ -45,11 +45,12 @@ public class TrainingSearchersAndSorters {
         }
 
         //QUICK SORT
-//        int[] quickSortArray = new int[]{9, 7, -10, 45, -37, 23};
-//        // quickSorting(quickSortArray, 0, quickSortArray.length - 1);
-//        for (int a : selectionSortArray) {
-//            System.out.println("Quick selected value " + a);
-//        }
+        Integer[] quickSortArray = new Integer[]{9, 2, 4, 1, 7, 5, 8, 3, 11};
+        quickSorting(quickSortArray, 0, quickSortArray.length - 1);
+        System.out.println("\nQuickSorting");
+        for (int a : quickSortArray) {
+            System.out.println("  value " + a);
+        }
 
         //BINARY SEARCH
         int[] binarySearchArray = new int[]{0, 1, 1, 2, 3, 4, 6, 7, 8, 90, 324};
@@ -180,6 +181,48 @@ public class TrainingSearchersAndSorters {
      * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
      */
 
+    private static void quickSorting(Integer[] arr, int low, int high) {
+
+        if (arr == null || arr.length == 0) {
+            return;
+        }
+        if (low >= high) {
+            return;
+        }
+
+        int middle = low + (high - low) / 2;
+        int pivot = arr[middle];
+
+        int i = low;
+        int j = high;
+
+        while (i <= j) {
+            while (arr[i] < pivot) {
+                i++;
+            }
+            while (arr[j] > pivot) {
+                j--;
+            }
+            if (i <= j) {
+                swap(arr, i, j);
+                i++;
+                j--;
+            }
+        }
+
+        if (low < j) {
+            quickSorting(arr, low, j);
+        }
+        if (high > i) {
+            quickSorting(arr, i, high);
+        }
+    }
+
+    private static void swap(Integer array[], int x, int y) {
+        int temp = array[x];
+        array[x] = array[y];
+        array[y] = temp;
+    }
 
     /**
      * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -296,5 +339,20 @@ public class TrainingSearchersAndSorters {
             System.out.println("Traversed: " + node.value);
             printInOrder(node.right);
         }
+    }
+
+    private int minimumDepth(Node root) {
+        if (root == null)
+            return 0;
+        if (root.left == null && root.right == null)
+            return 1;
+
+        if (root.left == null)
+            return minimumDepth(root.right) + 1;
+        if (root.right == null)
+            return minimumDepth(root.left) + 1;
+
+        return Math.min(minimumDepth(root.left),
+                minimumDepth(root.right)) + 1;
     }
 }
