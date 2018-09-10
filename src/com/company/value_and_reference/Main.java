@@ -66,5 +66,12 @@ public class Main {
         dobbie = 7000.7;
         System.out.println("Dobbie is now not like dobbie moment ago: " + dobbie);
         System.out.println("Donnie still is like old dobbie: " + donnie);
+
+        int intwart = 9;
+        double doublewart = 9;
+        System.out.println("\nDoes intwart is equal to doublewart: " + (intwart == doublewart));
+        Integer intWart = 9;
+        Double doubleWart = 9.0;
+        System.out.println("Does intWart is equal to doubleWart: " + (intWart.equals(doubleWart)));
     }
 }
